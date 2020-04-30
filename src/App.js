@@ -1,24 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Router } from '@reach/router';
+import Women from './components/Women';
+import Men from './components/Men';
+import Kids from './components/Kids';
+import Shoes from './components/Shoes';
+import Brands from './components/Brands';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
+  const navLinks = [
+    {
+      text: 'Women',
+      path: '/women'
+    },
+    {
+      text: 'Men',
+      path: '/men'
+    },
+    {
+      text: 'Kids',
+      path: '/kids'
+    },
+    {
+      text: 'Shoes',
+      path: '/shoes'
+    },
+    {
+      text: 'Brands',
+      path: '/brands'
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <Navbar 
+            navLinks = {navLinks}
+            />
+          <Router>
+              <Home path="/home" />
+              <Women path="/women" />
+              <Men path="/men" />
+              <Kids path="/kids" />
+              <Shoes path="/shoes" />
+              <Brands path="/brands" />
+          </Router>
     </div>
   );
 }
