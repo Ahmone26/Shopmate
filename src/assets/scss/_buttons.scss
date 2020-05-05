@@ -1,0 +1,27 @@
+$thm-white: rgb(251, 255, 255);
+$color-letter: rgb(219, 35, 90);
+$btn2-color: red;
+
+.btn {
+    background-color: $thm-white;
+    border: none;
+    padding: 17px 60px;
+    color: $color-letter;
+    position: absolute;
+    top: 83%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.btn2{
+    background-color: $btn2-color;
+    border-radius: 50px;
+    font-size: 20px;
+    color: $thm-white;
+    border: none;
+    padding: 17px 60px;
+    position: absolute;
+}
