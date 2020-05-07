@@ -39,6 +39,7 @@ function App() {
             navLinks = {navLinks}
             />
           <Router>
+              <Home path="/" />
               <Home path="/home" />
               <Women path="/women" />
               <Men path="/men" />
