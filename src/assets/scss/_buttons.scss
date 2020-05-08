@@ -14,6 +14,9 @@ $btn2-color: rgb(228, 55, 121);
     -ms-transform: translate(-50%, -50%);
     font-size: 20px;
     border-radius: 50px;
+    cursor: pointer;
+    opacity: 0.9;
+    outline: none;
 }
 
 .btn2{
@@ -23,4 +26,21 @@ $btn2-color: rgb(228, 55, 121);
     color: $thm-white;
     border: none;
     padding: 17px 60px;
+    cursor: pointer;
+    opacity: 0.9;
+    outline: none;
+}
+.btn:hover, .btn2:hover, .sub:hover{
+    opacity: 1;
+}
+.sub{
+    border-radius: 50px;
+    background-color: $btn2-color;
+    color: $thm-white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.9;
+    outline: none;
 }
