@@ -2,45 +2,106 @@ $thm-white: rgb(251, 255, 255);
 $color-letter: rgb(219, 35, 90);
 $btn2-color: rgb(228, 55, 121);
 
+$breakpoint-small: 840px; // 540px
+$breakpoint-med: 1000px; // 820px
+$breakpoint-large: 1150px; // 1024px
+
 .btn {
-    background-color: $thm-white;
-    border: none;
-    padding: 17px 60px;
-    color: $color-letter;
-    position: absolute;
-    top: 83%;
-    left: 18%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-size: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    opacity: 0.9;
-    outline: none;
+  background-color: $thm-white;
+  border: none;
+  padding: 17px 60px;
+  color: $color-letter;
+  position: absolute;
+  display: block;
+  top: 83%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.9;
+  outline: none;
 }
 
-.btn2{
-    background-color: $btn2-color;
-    border-radius: 50px;
-    font-size: 20px;
-    color: $thm-white;
-    border: none;
-    padding: 17px 60px;
-    cursor: pointer;
-    opacity: 0.9;
-    outline: none;
+.btn2 {
+  background-color: $btn2-color;
+  border-radius: 50px;
+  font-size: 20px;
+  color: $thm-white;
+  border: none;
+  padding: 15px 55px;
+  cursor: pointer;
+  opacity: 0.9;
+  outline: none;
 }
-.btn:hover, .btn2:hover, .sub:hover{
-    opacity: 1;
+.btn:hover,
+.btn2:hover,
+.sub:hover {
+  opacity: 1;
 }
-.sub{
-    border-radius: 50px;
-    background-color: $btn2-color;
-    color: $thm-white;
+.sub {
+  border-radius: 50px;
+  background-color: $btn2-color;
+  color: $thm-white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  opacity: 0.9;
+  outline: none;
+}
+.modal-btn {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+}
+.pop{
+  background-color: rgb(240, 111, 25);
+  width: 80px;
+  height: 35x;
+  border: none;
+  outline: none;
+  color: $thm-white;
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  left: 10%;
+  top: -65%;
+  background-size: 100%;
+  padding: 3px 15px;
+}
+
+@media only screen and (max-width: $breakpoint-med) {
+  .btn {
+    color: $color-letter;
+    top: 80%;
+    left: 15%;
+    font-size: 15px;
+    padding: 10px 25px;
+    
+  }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .btn {
+display: none;
+  }
+  .btn2 {
+    display: none;
+  }
+  .sub {
+    font-size: 12px;
+    padding: 7px 15px;
+  }
+  .modal-btn {
+    background-color: rgb(187, 99, 99);
     border: none;
-    padding: 10px 20px;
-    margin-left: 15px;
-    cursor: pointer;
-    opacity: 0.9;
+    font-size: 25px;
     outline: none;
+    cursor: pointer;
+  }
 }

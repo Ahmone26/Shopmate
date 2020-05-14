@@ -1,11 +1,13 @@
-import React, { Component } from 'react'; 
+import React, { Component } from "react";
 
 class Shoes extends Component {
-    render(){
-        return (
-            <div>Ovo je stranica Shoes</div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <h1>Ovo je stranica</h1>
+      </div>
+    );
+  }
 }
 
-export default Shoes
+export default Shoes;

@@ -1,10 +1,8 @@
-import React, { Component } from 'react'; 
+import React, { Component } from "react";
 
 class Men extends Component {
-    render(){
-        return (
-            <div>Ovo je Men stranica</div>
-        )
-    }
+  render() {
+    return <div></div>;
+  }
 }
-export default Men
+export default Men;

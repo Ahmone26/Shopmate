@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Women from './components/Women';
 import Men from './components/Men';
 import Kids from './components/Kids';
@@ -10,42 +10,23 @@ import Home from './components/Home';
 import './App.css';
 
 function App() {
-  const navLinks = [
-    {
-      text: 'Women',
-      path: '/women'
-    },
-    {
-      text: 'Men',
-      path: '/men'
-    },
-    {
-      text: 'Kids',
-      path: '/kids'
-    },
-    {
-      text: 'Shoes',
-      path: '/shoes'
-    },
-    {
-      text: 'Brands',
-      path: '/brands'
-    }
-  ]
+
 
   return (
     <div className="App">
-          <Navbar 
-            navLinks = {navLinks}
-            />
           <Router>
-              <Home path="/" />
-              <Home path="/home" />
-              <Women path="/women" />
-              <Men path="/men" />
-              <Kids path="/kids" />
-              <Shoes path="/shoes" />
-              <Brands path="/brands" />
+            <div>
+              <Navbar />
+              <div>
+                  <Route exact path="/" component={Home}/>
+                  <Route exact path="/home" component={Home}/>
+                  <Route exact path="/women" component={Women}/>
+                  <Route exact path="/men" component={Men}/>
+                  <Route exact path="/kids" component={Kids}/>
+                  <Route exact path="/shoes" component={Shoes}/>
+                  <Route exact path="/brands" component={Brands}/>
+              </div>
+            </div>
           </Router>
     </div>
   );
